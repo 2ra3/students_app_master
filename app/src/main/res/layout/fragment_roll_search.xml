@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout_roll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ac.iitm.students.fragments.RollSearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_search_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_search_white_24dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif"
+            android:hint="Search by roll number"
+            android:imeOptions="actionSearch"
+            android:inputType="textVisiblePassword" />
+
+        <Button
+            android:id="@+id/button_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorAccent"
+            android:text="Show details"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</FrameLayout>

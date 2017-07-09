@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iitm.students.activities.main.EMLActivity"
+    tools:showIn="@layout/app_bar_calendar">
+
+    <LinearLayout
+        android:id="@+id/year_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/calendars_padding">
+
+        <FrameLayout
+            android:id="@+id/even_year1_frame"
+            android:layout_width="0dp"
+            android:layout_height="212dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/even_year1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:alpha="0.5"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/even_year1_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/even_year1"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/odd_year1_frame"
+            android:layout_width="0dp"
+            android:layout_height="212dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/odd_year1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:alpha="0.5"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/odd_year1_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/odd_year1"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/year_1"
+        android:orientation="horizontal"
+        android:padding="@dimen/calendars_padding">
+
+        <FrameLayout
+            android:id="@+id/even_year2_frame"
+            android:layout_width="0dp"
+            android:layout_height="212dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/even_year2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:alpha="0.5"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/even_year2_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/even_year2"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/odd_year2_frame"
+            android:layout_width="0dp"
+            android:layout_height="212dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/odd_year2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:alpha="0.5"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/odd_year2_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/odd_year2"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

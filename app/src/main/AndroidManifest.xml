@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.ac.iitm.students">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        android {
+        defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        }
+        }
+
+        <!-- [START fcm_default_icon] -->
+        <!--
+             Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+        <!-- [END fcm_default_icon] -->
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="in.ac.iitm.students.activities.main.SplashActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SubscriptionActivity"
+            android:label="@string/title_activity_subscriptions"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.main.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation">
+            <intent-filter>
+                <action android:name="in.ac.iitm.students.activities.main.HomeActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.main.StudentSearchActivity"
+            android:label="@string/title_activity_student_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation" />
+        <activity
+            android:name=".activities.main.ImpContactsActivity"
+            android:label="@string/title_activity_imp_contacts"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation" />
+        <activity
+            android:name=".activities.main.GroupsAndClubsActivity"
+            android:label="@string/title_activity_groups_and_clubs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation"
+            >
+            <intent-filter>
+                <action android:name="in.ac.iitm.students.activities.main.GroupsAndClubsActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.main.EMLActivity"
+            android:label="@string/title_activity_eml_long"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation">
+            <intent-filter>
+                <action android:name="in.ac.iitm.students.activities.main.EMLActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.main.T5EActivity"
+            android:label="@string/title_activity_t5e_long"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation">
+            <intent-filter>
+                <action android:name="in.ac.iitm.students.activities.main.T5EActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.main.MessAndFacilitiesActivity"
+            android:label="@string/title_activity_mess_and_facilities"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation" />
+        <activity
+            android:name=".activities.main.CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation" />
+        <activity
+            android:name=".activities.StudentDetailsActivity"
+            android:label="@string/title_activity_student_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MyComplaintsActivity"
+            android:label="@string/title_activity_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MessageChatActivity"
+            android:label="@string/title_activity_message_chat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MessOrFacilitiesListActivity"
+            android:label="@string/title_activity_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ComplaintActivity"
+            android:label="@string/title_activity_complaint"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.CalendarDisplayActivity"
+            android:label="@string/title_activity_calendar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.EMLDetailsActivity"
+            android:label="@string/title_activity_emldetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.EMLFeedbackActivity"
+            android:label="@string/title_activity_emlfeedback"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.main.SchroeterActivity"
+            android:label="@string/title_activity_schroiter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="in.ac.iitm.students.activities.main.SchroeterActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ContactUsActivity"
+            android:label="@string/title_activity_contact_us"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:label="@string/title_activity_about_us"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".others.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".others.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        !--
+        The API key for Google Maps-based APIs is defined as a string resource.
+        (See the file "res/values/google_maps_api.xml").
+        Note that the API key is linked to the encryption key used to sign the APK.
+        You need a different API key for each encryption key, including the release key that is used
+        to
+        sign the APK for publishing.
+        You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.main.MapActivity"
+            android:label="@string/title_activity_map"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.noAnimation">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+    </application>
+
+</manifest>

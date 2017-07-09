@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MessageChatActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar6"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/complaint_resolved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="Complaint is resolved by ..."
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/list_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/complaint_resolved"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:paddingBottom="64dp"
+            android:transcriptMode="alwaysScroll" />
+
+        <LinearLayout
+            android:id="@+id/listFooter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@color/colorPrimaryLight"
+                android:hint="Type a message"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minHeight="48dp"
+                android:paddingLeft="8dp" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_send"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:src="@drawable/ic_send_white_24dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

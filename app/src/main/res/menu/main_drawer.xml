@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="@string/title_activity_home" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_white_24dp"
+            android:title="@string/title_activity_student_search" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_contacts_white_24dp"
+            android:title="@string/title_activity_imp_contacts" />
+        <item
+            android:id="@+id/nav_schroeter"
+            android:icon="@drawable/ic_football"
+            android:title="@string/title_activity_schroiter" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="@string/title_activity_map" />
+        <item
+            android:id="@+id/nav_groups_and_clubs"
+            android:icon="@drawable/podium_with_speaker"
+            android:title="@string/title_activity_groups_and_clubs" />
+       <!-- <item
+            android:id="@+id/nav_t5e"
+            android:icon="@drawable/ic_library_books_white_24dp"
+            android:title="@string/title_activity_t5e" />
+            -->
+        <item
+            android:id="@+id/nav_mess_and_facilities"
+            android:icon="@drawable/ic_restaurant_menu_black_24dp"
+            android:title="@string/title_activity_mess_and_facilities" />
+
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:title="@string/title_activity_calendar" />
+
+    </group>
+
+    <item android:title="Options">
+        <menu>
+            <item
+                android:id="@+id/nav_subscriptions"
+                android:icon="@drawable/ic_event_note_black_24dp"
+                android:title="@string/subscriptions" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="@string/title_activity_about_us" />
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="@string/title_activity_contact_us" />
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+</menu>
